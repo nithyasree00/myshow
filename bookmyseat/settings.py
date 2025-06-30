@@ -86,12 +86,13 @@ WSGI_APPLICATION = 'bookmyseat.wsgi.application'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
 DATABASES = {
-    'default': dj_database_url.config(
-        default='sqlite:///db.sqlite3',  # fallback for local
-        conn_max_age=600,
-        ssl_require=True
-    )
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
 }
+#DATABASES['default'] = dj_database_url.parse('postgresql://djangobook_user:bQp3AyyEqah0ZID8zxjce2JT5ayPjjl3@dpg-d194vd95pdvs73dujgr0-a.oregon-postgres.render.com/djangobook')
+# 
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
