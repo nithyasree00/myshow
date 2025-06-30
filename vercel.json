@@ -1,8 +1,15 @@
 {
+  "version": 2,
   "builds": [
-    { "src": "bookmyseat/wsgi.py", "use": "@vercel/python" }
+    {
+      "src": "django_book_my_show/manage.py",
+      "use": "@vercel/python"
+    }
   ],
   "routes": [
-    { "src": "/(.*)", "dest": "bookmyseat/wsgi.py" }
+    {
+      "src": "/(.*)",
+      "dest": "django_book_my_show/manage.py"
+    }
   ]
 }
