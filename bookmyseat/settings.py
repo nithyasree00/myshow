@@ -26,11 +26,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: don't run with debug turned on in production!
 #DEBUG = True
 SECRET_KEY = os.environ.get('SECRET_KEY', 'unsafe-key-for-dev')
-DEBUG = os.environ.get('DEBUG', 'False') == 'True'
+DEBUG =  'True'
 
 
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['127.0.1','localhost','*','bookmyseat.onrender.com']
 
 
 
@@ -105,18 +105,18 @@ WSGI_APPLICATION = 'bookmyseat.wsgi.application'
 
 
 
-# DATABASES = {
-#     'default': dj_database_url.config(
-#         default='postgresql://djangobook_user:bQp3AyyEqah0ZID8zxjce2JT5ayPjjl3@dpg-d194vd95pdvs73dujgr0-a.oregon-postgres.render.com/djangobook'
-#     )
-# }
-
-
 DATABASES = {
     'default': dj_database_url.config(
-        default=os.environ.get('DATABASE_URL')
+        default='postgresql://djangobook_user:bQp3AyyEqah0ZID8zxjce2JT5ayPjjl3@dpg-d194vd95pdvs73dujgr0-a.oregon-postgres.render.com/djangobook'
     )
 }
+
+
+# DATABASES = {
+#     'default': dj_database_url.config(
+#         default=os.environ.get('DATABASE_URL')
+#     )
+# }
 
 
 
