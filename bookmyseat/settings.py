@@ -29,8 +29,9 @@ DEBUG = True
 ALLOWED_HOSTS = [
     '127.0.0.1',
     'localhost',
-    'myshow-lxk1-dn2r01dyx-nithya-srees-projects.vercel.app'
+    'myshow-svux-e6ck6wm0u-nithya-srees-projects.vercel.app'
 ]
+
 
 
 # Application definition
