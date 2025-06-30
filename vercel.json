@@ -1,15 +1,17 @@
 {
-  "version": 2,
   "builds": [
     {
-      "src": "django_book_my_show/manage.py",
-      "use": "@vercel/python"
+      "src": "manage.py",
+      "use": "@vercel/python",
+      "config": {
+        "maxLambdaSize": "50mb"
+      }
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "django_book_my_show/manage.py"
+      "dest": "manage.py"
     }
   ]
 }
