@@ -29,8 +29,7 @@ DEBUG = True
 ALLOWED_HOSTS = [
     '127.0.0.1',
     'localhost',
-    'myshow-svux-e6ck6wm0u-nithya-srees-projects.vercel.app',  # this is the domain shown in your latest error
-    'myshow-giupr3ljx-nithya-srees-projects.vercel.app'         # this was from the successful page screenshot
+    'myshow-svux-e6ck6wm0u-nithya-srees-projects.vercel.app',      # this was from the successful page screenshot
 ]
 
 
