@@ -2,22 +2,18 @@
   "version": 2,
   "builds": [
     {
-      "src": "django_book_my_show/wsgi.py",
-      "use": "@vercel/python",
-      "config": {
-        "maxLambdaSize": "50mb",
-        "runtime": "python3.10"
-      }
+      "src": "manage.py",
+      "use": "@vercel/python"
     }
   ],
   "routes": [
     {
       "src": "/static/(.*)",
-      "dest": "/static/$1"
+      "dest": "staticfiles/$1"
     },
     {
       "src": "/(.*)",
-      "dest": "django_book_my_show/wsgi.py"
+      "dest": "manage.py"
     }
   ]
 }
