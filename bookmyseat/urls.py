@@ -6,10 +6,9 @@ from movies.views import home  # ✅ Import the home view
 
 urlpatterns = [
     path('', home, name='home'),
-    path('', include('movies.urls')),
     path('admin/', admin.site.urls),
     path('users/', include('users.urls')),
-    path('movies/', include('movies.urls')),
+    path('', include('movies.urls')),
     
 ]
 
