@@ -97,7 +97,7 @@ def home(request):
         'unique_movies': unique_movies,
         'recommended_movies': recommended_movies
     }
-    return render(request, 'movies/home.html', context)
+    return render(request, 'templates/home.html', context)
 
     
 
