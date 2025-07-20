@@ -112,18 +112,18 @@ WSGI_APPLICATION = 'bookmyseat.wsgi.application'
 # }
 
 
-# DATABASES = {
-#     'default': dj_database_url.config(
-#         default=os.environ.get('DATABASE_URL','postgresql://djangobook_user:bQp3AyyEqah0ZID8zxjce2JT5ayPjjl3@dpg-d194vd95pdvs73dujgr0-a.oregon-postgres.render.com/djangobook?sslmode=require')
-#     )
-# }
-
-
 DATABASES = {
     'default': dj_database_url.config(
-        default=os.environ.get('DATABASE_URL')
+        default=os.environ.get('DATABASE_URL','postgresql://djangobook_user:bQp3AyyEqah0ZID8zxjce2JT5ayPjjl3@dpg-d194vd95pdvs73dujgr0-a.oregon-postgres.render.com/djangobook')
     )
 }
+
+
+# DATABASES = {
+#     'default': dj_database_url.config(
+#         default=os.environ.get('DATABASE_URL')
+#     )
+# }
 import os
 ALLOWED_HOSTS = ['pythondjango.onrender.com']
 
